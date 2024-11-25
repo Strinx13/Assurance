@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.work-sans {
+    font-family: 'Work Sans', sans-serif;
+}
+
+#menu-toggle:checked + #menu {
+    display: block;
+}
+
+.hover\:grow {
+    transition: all 0.3s;
+    transform: scale(1);
+}
+
+.hover\:grow:hover {
+    transform: scale(1.02);
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+    margin-top: 60px;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #000;
+    /*Set to match the Tailwind colour you want the active one to be */
+}
+
+.product-image {
+    width: 100%; /* Ajusta la imagen al contenedor */
+    max-width: 300px; /* Máximo ancho de la imagen */
+    height: 300px; /* Altura fija de la imagen */
+    object-fit: contain; /* Asegúrate de que la imagen se ajuste sin distorsionar */
+}
+
+nav {
+    display: grid;
+    position: fixed;
+    background-color: white;
+}
+
+.product-details {
+    margin-top: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.tshot {
+    width: 33.3333%;
+}
+
+.h-auto {
+    height: 50vh;
+}
+
+.containerpay{
+    margin-top: 80px;
+    width: 50%;
+}
